@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <meta charset="UTF-8">
+    <title>Din-Din</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <h1>Din-Din</h1>
+    <img src="images.png" class="moeda-direita">
+    <img src="habbo moedas.gif" class="moeda-esquerda">
+
+    <div class="container">
+        <div class="missao">
+          <h2>Tamo junto 🛒</h2>
+          <form id="lista-mercado-form">
+            <input type="text" id="nomeItem" placeholder="Nome do item">
+            <input type="number" id="valorItem" placeholder="Valor do item" step="0.01">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="lista-mercado"></ul>
+        <p>Total: R$ <span id="total">0.00</span></p>
+        <button id="limpar-tela">Limpar Lista</button>
+      </div>
+
+    <script>
+        gsap.to(".missao", {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.5,
+            ease: "bounce.out"
+        })
+    </script>
+
+    <img src="moeda.png" id="moeda" alt="Moeda" width="80">
+    <canvas id="graficoEntradasSaidas" width="400" height="200"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
